@@ -1,0 +1,122 @@
+/**
+ * Copyright (c) 2012-2017 Red Hat, Inc.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *   Red Hat, Inc. - initial API and implementation
+ */
+.toolbarButton {
+    float: left;
+    line-height: 20px;
+    margin-left: 15px;
+}
+
+.processesListExecLabel,
+.processesListLoadLabel {
+    float: left;
+    border-left: commandsToolbarProcessesLabelBorder;
+    border-top: commandsToolbarProcessesLabelBorder;
+    border-bottom: commandsToolbarProcessesLabelBorder;
+    border-right: 0;
+    font-family: mainFontFamily;
+    font-size: 9px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    text-align: center;
+    color: #4eabff;
+    width: 44px;
+    height: 22px;
+    line-height: 22px;
+    background: commandsToolbarProcessesLabelBackground;
+    cursor: default;
+}
+
+.processesListLoadLabel {
+    display: none;
+    background-color: #191d28;
+    font-size: 11px;
+}
+
+.processWidgetText {
+    font-family: mainFontFamily;
+    font-size: fontSize;
+}
+
+.processWidgetMachineNameLabel {
+    float: left;
+    color: commandsToolbarMachineNameColor;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: literal("calc(100% - 50px)");
+}
+
+.processWidgetCommandNameLabel {
+    float: left;
+    color: commandsToolbarCommandNameColor;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: literal("calc(100% - 200px)");
+}
+
+.processWidgetPidLabel {
+    float: right;
+    margin: 0 10px 0 0;
+}
+
+.processWidgetActionButton {
+    float: right;
+    outline: none;
+    color: #4eabff;
+}
+
+.previewUrlWidget {
+    color: #4eabff;
+    font-size: 18px;
+}
+
+.previewUrlWidget:active {
+    color: #235c9e;
+}
+
+.loaderPanel {
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 22px;
+    background-color: #242a3a;
+    border: solid 1px #2b3242;
+    overflow: hidden;
+}
+
+.loaderPanelLabel {
+    position: absolute;
+    left: 5px;
+    top: 0px;
+    right: 5px;
+    bottom: 4px;
+    box-sizing: border-box;
+    font-family: "Droid Sans Mono", monospace;
+    font-size: 11px;
+    line-height: 22px;
+    text-align: left;
+    color: #e3e3e3;
+    cursor: default;
+}
+
+.loaderPanelProgressBar {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    height: 2px;
+    background-color: #4f7ed3;
+    box-sizing: border-box;
+    width: 0%;
+    transition: width ease-in-out 0.5s;
+}
