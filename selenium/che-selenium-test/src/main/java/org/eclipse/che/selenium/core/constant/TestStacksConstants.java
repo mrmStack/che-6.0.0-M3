@@ -28,7 +28,6 @@ public enum TestStacksConstants {
   NODE("node-default", "Node"),
   PHP("php-default", "PHP"),
   PYTHON("python-default", "Python"),
-  PYTHON_MRIERA("python-mriera", "Python"),
   RAILS("rails-default", "Rails");
 
   private final String id;
