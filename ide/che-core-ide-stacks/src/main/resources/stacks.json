@@ -1110,6 +1110,81 @@
     }
   },
   {
+    "id": "python-mriera",
+    "creator": "ide",
+    "name": "Python Mriera",
+    "description": "Mriera Python Stack with Python 3.5.1, pip 8.1.1.",
+    "scope": "general",
+    "tags": [
+      "Python 3.5",
+      "pip",
+      "Ubuntu",
+      "Git"
+    ],
+    "components": [
+      {
+        "name": "Python",
+        "version": "3.5.1"
+      },
+      {
+        "name": "pip",
+        "version": "8.1.1"
+      }
+    ],
+    "source": {
+      "type": "image",
+      "origin": "eclipse/ubuntu_python:latest"
+    },
+    "workspaceConfig": {
+      "environments": {
+        "default": {
+          "machines": {
+            "dev-machine": {
+              "installers": [
+                "org.eclipse.che.exec", "org.eclipse.che.terminal", "org.eclipse.che.ws-agent", "org.eclipse.che.ls.python"
+              ],
+              "servers": {
+                "8080/tcp" : {
+                  "port" : "8080",
+                  "protocol" : "http"
+                },
+                "8000/tcp" : {
+                  "port" : "8000",
+                  "protocol" : "http"
+                }
+              },
+              "attributes" : {
+                "memoryLimitBytes": "2147483648"
+              }
+            }
+          },
+          "recipe": {
+            "location": "eclipse/ubuntu_python:latest",
+            "type": "dockerimage"
+          }
+        }
+      },
+      "name": "default",
+      "defaultEnv": "default",
+      "description": null,
+      "commands": [
+        {
+          "name": "run",
+          "type": "custom",
+          "commandLine": "cd ${current.project.path} && python main.py",
+          "attributes": {
+            "previewUrl": "",
+            "goal": "Run"
+          }
+        }
+      ]
+    },
+    "stackIcon": {
+      "name": "type-python.svg",
+      "mediaType": "image/svg+xml"
+    }
+  },
+  {
     "id": "rails-default",
     "creator": "ide",
     "name": "Rails",
